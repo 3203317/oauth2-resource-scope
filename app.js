@@ -14,6 +14,7 @@ var app = OpenA();
 
 app.use(OpenA.api.logger());
 app.use(OpenA.api.method(app.apis));
+app.use(OpenA.api.ver(app.apis));
 app.use(OpenA.api.params(app.apis));
 
 app.use(OpenA.api.session(biz.user_app.getSession));
