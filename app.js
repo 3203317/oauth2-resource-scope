@@ -7,6 +7,7 @@
 
 const http = require('http');
 const OpenA = require('opena');
+const bodyParser = require('body-parser');
 
 const biz = require('oauth2.biz');
 
@@ -26,6 +27,9 @@ app.use(OpenA.api.sign(app.apis, (appkey, cb) => {
     cb(null, doc.seckey);
   });
 }));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(OpenA.api.exec(app.apis));
 app.use(OpenA.api.error());
