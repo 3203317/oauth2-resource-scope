@@ -12,7 +12,7 @@ module.exports = {
       host: '127.0.0.1',
       port: 12306,
       user: 'root',
-      password: '123456',
+      password: 'password',
       connectionLimit: 50
     },
     redis: {
@@ -27,7 +27,7 @@ module.exports = {
       host: '127.0.0.1',
       port: 12306,
       user: 'root',
-      password: '123456',
+      password: 'password',
       connectionLimit: 50
     }
   }
